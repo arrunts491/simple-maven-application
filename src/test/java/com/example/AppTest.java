@@ -1,13 +1,24 @@
 package com.example;
 
-import org.junit.Test;
-import static org.junit.Assert.*;
+import junit.framework.TestCase;
 
-public class AppTest {
+public class AppTest extends TestCase {
 
-    @Test
+    App app = new App();
+
     public void testAdd() {
-        App app = new App();
-        assertEquals(5, app.add(2, 3));
+        assertEquals(5, app.add(2,3));
+    }
+
+    public void testSubtract() {
+        assertEquals(2, app.subtract(5,3));
+    }
+
+    public void testMultiply() {
+        assertEquals(6, app.multiply(2,3));
+    }
+
+    public void testDivide() {
+        assertEquals(2, app.divide(6,3));
     }
 }
